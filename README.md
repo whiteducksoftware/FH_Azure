@@ -11,7 +11,7 @@ Folgender UseCase wird implementiert:
 
 **Requirements:**
 
-- js
+- Node.js
 
 [https://nodejs.org/en/](https://nodejs.org/en/)
 
@@ -20,29 +20,37 @@ Folgender UseCase wird implementiert:
 [https://www.microsoft.com/net/download](https://www.microsoft.com/net/download)
 
 - Angular CLI
-
+```
 npm install -g @angular/cli
+```
 
 - Azure Resources (Web App + Storage + Function App)
-
-- Azure Functions and WebJob Tools (Visual Studio -\&gt; Tools -\&gt; Extension and Updates)
+- Azure SDK (Visual Studio / Tools / Get Tools and Features)
+- Azure Functions and WebJob Tools (Visual Studio / Tools / Extension and Updates)
 
 
 
 ## 1 Project scaffolding
 
-- dotnet new angular --name file-upload
+Anlegen eines Angular Projekts
+```
+dotnet new angular --name file-upload
+```
 
+Hinzufügen des Azure Storage Package
 Im Ordner &quot;file-upload&quot;
 
-- dotnet add package WindowsAzure.Storage
-
+```
+dotnet add package WindowsAzure.Storage
+```
+Hinzufügen und Erstellen von benötigten Komponenten und Modulen
 Im Ordner &quot;file-upload\ClientApp&quot;
-
-- npm install
-- ng g component fileUpload
-- npm install primeng --save
-- npm install primeicons --save
+```
+npm install
+ng g component fileUpload
+npm install primeng --save
+npm install primeicons --save
+```
 
 Projekt mit Visual Studio öffnen und ausführen.
 

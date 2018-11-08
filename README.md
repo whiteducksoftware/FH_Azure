@@ -115,3 +115,131 @@ Bildbearbeitung: Nuget Package &quotImageSharp&quot; [https://github.com/SixLabo
 Analog zum Controller in der Middleware das prozessierte Bild in einen neuen Container im Blob ablegen.
 
 Die Appsetting &quotFileBlob&quot; muss nach dem deployen in die Appsettings der &quotonline&quot; Function App eingetragen werden.
+
+
+# Monitor Web App und Azure Function Hands On
+
+Für den im Azure WebApps + Storage + Functions Hands On implementierten UseCase wird ein Monitoring implementiert.
+
+- Hinzufügen von Application Insights zur Middleware
+- Hinzufügen von Application Insights für Azure Functions
+  - Auswerten eines fehlerhaften Uploads
+- Custom Logging
+  - Hinzufügen von Custom Monitoring
+    - In der Middleware mit dem TelemetryClient
+  - In der UI
+    - Tracken von Page Views mit einem custom monitoring service
+- Anzeigen/Auswerten im Portal
+
+**Requirements:**
+
+- Application Insights Resourcen (3 Stück) in eigener RG erstellen und sprechend benennen.
+  - Middleware
+    - Application Insights für die ASP.NET web application erstellen
+  - Function
+    - Application Insights für die ASP.NET web application erstellen
+  - UI
+    - Application Insights für Node.js application erstellen (UI)
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/CreateAppinsights.png?raw=true "Publish")
+
+## 1 Implementieren von Application Insights in die Middleware
+
+In Visual Studio in die File Upload App wechseln
+
+Unter Manage NuGet Packages App Insights hinzufügen und auf aktuelle Version (2.5.1) prüfen
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/AddNuGetPackage.png?raw=true "Publish")
+
+Startup.cs
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/Startup.png?raw=true "Publish")
+
+Program.cs
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/Program.png?raw=true "Publish")
+
+Appsettings.json (Instrumentation Key der richtigen App Insights Resource eintragen)
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/Appsettings.png?raw=true "Publish")
+
+Ausführen
+
+- Lokal ausführen und prüfen ob in der Cloud App Insights resource etwas ankommt (Kann ein wenig Zeit dauern)
+- Wenn es funktioniert die App wieder Publishen
+- Dann Online testen
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/Publish.png?raw=true "Publish")
+
+## 2 Implementieren von Application Insights in die Middleware
+
+Kopieren des Instrumentation Key der Azure Function Application Insights resource
+
+In der Azure Function --> Application Settings
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/func1.png?raw=true "Publish")
+
+Add new setting
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/func2.png?raw=true "Publish")
+
+**ÜBUNG**
+
+Zu der Azure Function Application Insights resource wechseln
+
+- Bilder hochladen und prüfen ob App Insights etwas registriert
+- Eine Datei (Kein Bild!) hochladen z.B .pdf
+- Die Ursache für einen Fehler in der function mithilfe von App Insights suchen (Wo steht wieso der Dateiupload fehlgeschlagen ist)
+
+
+## 3 Implementieren von Custom Events mit dem Telemetry Client
+
+FileUploadController.cs (Den Filenamen und die Filegröße mit einem Upload Event tracken)
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/FileUploadController.png?raw=true "Publish")
+
+## 4 Implementieren von Application Insights für die UI (Custom Logging)
+
+Environment.ts
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/environment.png?raw=true "Publish")
+
+Environment.prod.ts
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/environment-prod.png?raw=true "Publish")
+
+Under Ordner app --> neuen Ordner services erstellen und monitoring service files anlegen
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/services.png?raw=true "Publish")
+
+Monitoring.service.spec.ts
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/monitoring-service-spec.png?raw=true "Publish")
+
+monitoring.service.ts
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/monitoring-service.png?raw=true "Publish")
+
+App.module.ts
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/appmodule.png?raw=true "Publish")
+
+Counter.components.ts
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/counter-component.png?raw=true "Publish")
+
+Fetch-data.component.ts
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/fetch-data-component.png?raw=true "Publish")
+
+File-upload.components.ts
+
+![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/file-upload-component.png?raw=true "Publish")
+
+Ausführen
+
+- Lokal und prüfen in App Insights was angezeigt wird
+- Publishen und nochmals prüfen
+
+
+

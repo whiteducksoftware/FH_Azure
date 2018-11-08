@@ -99,7 +99,7 @@ Neues Azure Functions Projekt erstellen
 
 In &quot;local.settings.json&quot; ConnectionString hinzufügen
 
-![Settings](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs/func.png?raw=true "Settings")
+![Settings](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs/funcsettings.png?raw=true "Settings")
 
 Lokal ausführen und mit Bildupload testen.
 

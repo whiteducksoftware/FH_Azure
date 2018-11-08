@@ -1,4 +1,4 @@
-# Azure WebApps + Storage + Functions Hands On
+# Teil 1: Azure WebApps + Storage + Functions Hands On
 
 Folgender UseCase wird implementiert:
 
@@ -26,7 +26,7 @@ npm install -g @angular/cli
 
 
 
-## 1 Project scaffolding
+## Schritt 1: Project scaffolding
 
 Anlegen eines Angular Projekts
 ```
@@ -50,7 +50,7 @@ npm install primeicons --save
 
 Projekt mit Visual Studio öffnen und ausführen.
 
-## 2 Middleware Controller
+## Schritt: 2 Middleware Controller
 
 appsettings.json:
 ```
@@ -63,7 +63,7 @@ Im Ordner &quot;Contollers&quot; neuen &quot;FileUploadController.cs&quot; erste
 
 ![Controller](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs/controller.png?raw=true "Controller")
 
-## 3 Frontend
+## Schritt: 3 Frontend
 
 Bereitstellen des IconSets und Styles in angular-cli.json;
 
@@ -81,13 +81,13 @@ Implementierung des FileUpload Controls in file-upload.component.html;
 
 ![Upload](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs/nav.png?raw=true "Upload")
 
-## 4 Deployment der WebApp
+## Schritt: 4 Deployment der WebApp
 
 Projektkontextmenü - Publish
 
 ![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs/publish.png?raw=true "Publish")
 
-## 5 Azure Functions
+## Schritt: 5 Azure Functions
 
 Neues Azure Functions Projekt erstellen
 
@@ -113,7 +113,7 @@ Analog zum Controller in der Middleware das prozessierte Bild in einen neuen Con
 Die Appsetting &quotFileBlob&quot; muss nach dem deployen in die Appsettings der &quotonline&quot; Function App eingetragen werden.
 
 
-# Monitor Web App und Azure Function Hands On
+# Teil 2: Monitor Web App und Azure Function Hands On
 
 Für den im Azure WebApps + Storage + Functions Hands On implementierten UseCase wird ein Monitoring implementiert.
 
@@ -139,7 +139,7 @@ Für den im Azure WebApps + Storage + Functions Hands On implementierten UseCase
 
 ![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/CreateAppinsights.png?raw=true "Publish")
 
-## 1 Implementieren von Application Insights in die Middleware
+## Schritt: 1 Implementieren von Application Insights in die Middleware
 
 In Visual Studio in die File Upload App wechseln
 
@@ -167,7 +167,7 @@ Ausführen
 
 ![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/Publish.png?raw=true "Publish")
 
-## 2 Implementieren von Application Insights in die Middleware
+## Schritt: 2 Implementieren von Application Insights in die Middleware
 
 Kopieren des Instrumentation Key der Azure Function Application Insights resource
 
@@ -188,13 +188,13 @@ Zu der Azure Function Application Insights resource wechseln
 - Die Ursache für einen Fehler in der function mithilfe von App Insights suchen (Wo steht wieso der Dateiupload fehlgeschlagen ist)
 
 
-## 3 Implementieren von Custom Events mit dem Telemetry Client
+## Schritt: 3 Implementieren von Custom Events mit dem Telemetry Client
 
 FileUploadController.cs (Den Filenamen und die Filegröße mit einem Upload Event tracken)
 
 ![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/FileUploadController.png?raw=true "Publish")
 
-## 4 Implementieren von Application Insights für die UI (Custom Logging)
+## Schritt: 4 Implementieren von Application Insights für die UI (Custom Logging)
 
 Environment.ts
 

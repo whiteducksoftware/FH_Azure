@@ -11,13 +11,9 @@ Folgender UseCase wird implementiert:
 
 **Requirements:**
 
-- Node.js
+- Node.js [https://nodejs.org/en/](https://nodejs.org/en/)
 
-[https://nodejs.org/en/](https://nodejs.org/en/)
-
-- .NET Core
-
-[https://www.microsoft.com/net/download](https://www.microsoft.com/net/download)
+- .NET Core [https://www.microsoft.com/net/download](https://www.microsoft.com/net/download)
 
 - Angular CLI
 ```
@@ -69,19 +65,19 @@ Im Ordner &quot;Contollers&quot; neuen &quot;FileUploadController.cs&quot; erste
 
 ## 3 Frontend
 
-Bereitstellen des IconSets und Styles in &quot;.angular-cli.json&quot;
+Bereitstellen des IconSets und Styles in angular-cli.json;
 
 ![Styles](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs/styles.png?raw=true "Styles")
 
-Bereitstellen benötigter Module und Komponenten in &quot;app.module.ts&quot;
+Bereitstellen benötigter Module und Komponenten in app.module.ts;
 
 ![Modules](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs/appmodule.png?raw=true "Modules")
 
-Implementierung eines Menüverweis zum FileUpload in &quot;nav-menu.component.html&quot;
+Implementierung eines Menüverweis zum FileUpload in nav-menu.component.html;
 
 ![Navigation](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs/nav.png?raw=true "Modules")
 
-Implementierung des FileUpload Controls in &quot;file-upload.component.html&quot;
+Implementierung des FileUpload Controls in file-upload.component.html;
 
 ![Upload](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs/nav.png?raw=true "Upload")
 

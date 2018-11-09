@@ -169,7 +169,7 @@ Ausführen
 
 ![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/Publish.png?raw=true "Publish")
 
-## Schritt 2: Implementieren von Application Insights in die Middleware
+## Schritt 2: Implementieren von Application Insights in die Function
 
 Kopieren des Instrumentation Key der Azure Function Application Insights resource
 

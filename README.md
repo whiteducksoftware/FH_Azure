@@ -106,11 +106,11 @@ Lokal ausführen und mit Bildupload testen.
 
 Tipps:
 
-Bildbearbeitung: Nuget Package &quotImageSharp&quot; [https://github.com/SixLabors/ImageSharp](https://github.com/SixLabors/ImageSharp) (siehe API Beispiel)
+Bildbearbeitung: Nuget Package &quot;ImageSharp&quot; [https://github.com/SixLabors/ImageSharp](https://github.com/SixLabors/ImageSharp) (siehe API Beispiel)
 
 Analog zum Controller in der Middleware das prozessierte Bild in einen neuen Container im Blob ablegen.
 
-Die Appsetting &quotFileBlob&quot; muss nach dem deployen in die Appsettings der &quotonline&quot; Function App eingetragen werden.
+Die Appsetting &quot;FileBlob&quot; muss nach dem deployen in die Appsettings der &quot;online&quot; Function App eingetragen werden.
 
 
 # Teil 2: Monitor Web App und Azure Function Hands On

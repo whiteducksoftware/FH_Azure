@@ -198,6 +198,10 @@ FileUploadController.cs (Den Filenamen und die Filegröße mit einem Upload Even
 
 ## Schritt 4: Implementieren von Application Insights für die UI (Custom Logging)
 
+package.json
+
+Nötige Packete installieren
+
 Environment.ts
 
 ![Publish](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs2/environment.png?raw=true "Publish")

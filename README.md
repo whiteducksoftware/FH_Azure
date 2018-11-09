@@ -15,6 +15,8 @@ Folgender UseCase wird implementiert:
 
 - Azure Functions and WebJob Tools (Visual Studio / Tools / Extension and Updates)
 
+- Azure Storage Explorer [https://azure.microsoft.com/en-us/features/storage-explorer/](https://azure.microsoft.com/en-us/features/storage-explorer/)
+
 - Node.js [https://nodejs.org/en/](https://nodejs.org/en/)
 
 - .NET Core [https://www.microsoft.com/net/download](https://www.microsoft.com/net/download)

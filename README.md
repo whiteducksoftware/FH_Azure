@@ -11,6 +11,10 @@ Folgender UseCase wird implementiert:
 
 **Requirements:**
 
+- Azure SDK (Visual Studio / Tools / Get Tools and Features)
+
+- Azure Functions and WebJob Tools (Visual Studio / Tools / Extension and Updates)
+
 - Node.js [https://nodejs.org/en/](https://nodejs.org/en/)
 
 - .NET Core [https://www.microsoft.com/net/download](https://www.microsoft.com/net/download)
@@ -21,10 +25,6 @@ npm install -g @angular/cli
 ```
 
 - Azure Resources (Web App + Storage + Function App)
-- Azure SDK (Visual Studio / Tools / Get Tools and Features)
-- Azure Functions and WebJob Tools (Visual Studio / Tools / Extension and Updates)
-
-
 
 ## Schritt 1: Project scaffolding
 

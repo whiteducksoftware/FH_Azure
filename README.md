@@ -79,7 +79,7 @@ Implementierung eines Menüverweis zum FileUpload in nav-menu.component.html;
 
 Implementierung des FileUpload Controls in file-upload.component.html;
 
-![Upload](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs/nav.png?raw=true "Upload")
+![Upload](https://github.com/whiteducksoftware/FH_Azure/blob/master/docs/imgs/upload.png?raw=true "Upload")
 
 ## Schritt 4: Deployment der WebApp
 
